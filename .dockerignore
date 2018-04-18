@@ -1,0 +1,8 @@
+.DS_Store
+.idea
+*.iml
+dependencies
+browser-ext
+idea-runner
+target
+out

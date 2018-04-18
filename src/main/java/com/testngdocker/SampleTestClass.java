@@ -10,7 +10,7 @@ public class SampleTestClass {
     }
 
     @Test
-    public void TestShouldFail() {
-        Assert.assertEquals(1, 2);
+    public void TestShouldPassToo() {
+        Assert.assertEquals(2, 2);
     }
 }
