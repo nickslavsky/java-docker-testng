@@ -6,5 +6,5 @@ function FindProxyForURL(url, host) {
     }
 
     // Test HTTP traffic, route it through the local BrowserMob proxy.
-    return "PROXY localhost:623323";
+    return "PROXY localhost:9191";
 }

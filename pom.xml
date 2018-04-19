@@ -27,6 +27,11 @@
             <artifactId>browsermob-core</artifactId>
             <version>2.1.5</version>
         </dependency>
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-java</artifactId>
+            <version>3.10.0</version>
+        </dependency>
     </dependencies>
     <build>
         <finalName>dockertest</finalName>
