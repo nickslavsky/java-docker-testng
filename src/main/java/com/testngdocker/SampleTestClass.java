@@ -65,8 +65,9 @@ public class SampleTestClass {
         driver.quit();
         SauceConnectFourManager.closeTunnelsForPlan(username, null, null);
         Har har = browserMobProxyServer.getHar();
+        System.out.println("entered tear down");
         har.getLog().getEntries().removeIf(x->
-                !(x.getRequest().getMethod().equals("POST") && x.getRequest().getUrl().contains("count")));
+                !(x.getRequest().getMethod().equals("POST")));
         for (HarEntry entry : har.getLog().getEntries()) {
             System.out.println(entry.getRequest().getUrl());
         }

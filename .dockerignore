@@ -2,6 +2,7 @@
 .idea
 *.iml
 dependencies
+browsermob-proxy
 browser-ext
 idea-runner
 target
