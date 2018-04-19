@@ -1,5 +1,7 @@
 out/
 test-output/
+target/
+browsermob-proxy/
 
 .vscode/
 target/
