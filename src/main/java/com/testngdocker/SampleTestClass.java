@@ -39,8 +39,7 @@ public class SampleTestClass {
             e.printStackTrace();
         }
 
-        DesiredCapabilities caps = new DesiredCapabilities();
-        caps.setCapability("browserName", "Safari");
+        DesiredCapabilities caps = DesiredCapabilities.chrome();
         caps.setCapability("platform", "Windows 10");
         caps.setCapability("version", "latest");
         String url = "https://" + username + ":" + key + "@ondemand.saucelabs.com:443/wd/hub";
