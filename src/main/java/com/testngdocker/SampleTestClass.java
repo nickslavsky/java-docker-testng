@@ -18,8 +18,8 @@ public class SampleTestClass {
     private SauceTunnelManager SauceConnectFourManager;
     private BrowserMobProxyServer browserMobProxyServer;
     private WebDriver driver;
-    private  String username = "benadryl";
-    private String key = "1f5c74ff-010d-4fc8-a140-4a00cdf1b0d4";
+    private  String username = System.getenv("CLOUD_TESTING_USERNAME");
+    private String key = System.getenv("CLOUD_TESTING_KEY");
     private String filePath = "/usr/local/app/browsermob.js";
 
     @BeforeClass
@@ -39,7 +39,8 @@ public class SampleTestClass {
             e.printStackTrace();
         }
 
-        DesiredCapabilities caps = DesiredCapabilities.chrome();
+        DesiredCapabilities caps = new DesiredCapabilities();
+        caps.setCapability("browserName", "Safari");
         caps.setCapability("platform", "Windows 10");
         caps.setCapability("version", "latest");
         String url = "https://" + username + ":" + key + "@ondemand.saucelabs.com:443/wd/hub";
